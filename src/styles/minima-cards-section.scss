@@ -1,0 +1,73 @@
+@import "colors";
+
+.minima-card-wrapper{
+    display: flex;
+    padding: 2% 10%;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.arrow-card-wrapper{
+    width: 30%;
+    padding: 3%;
+    border-right: 0.5px solid #DADADA;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: content-box;
+    position: relative;
+    span{
+        font-style: 'Poppins';
+        font-weight: 700;
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    p{
+        width: 80%;
+        margin: 10px auto;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        text-align: left;
+        color: $content_primary_color;
+        text-align: center;
+    }
+    &:last-child{
+        border: transparent;
+    }
+    &:last-child::after{
+        border: transparent;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+        background-color: white;
+        right: -10.3px;
+        border-top: 0.5px solid #DADADA;
+        border-right: 0.5px solid #DADADA;
+        transform: rotate(45deg);
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+    .arrow-card-wrapper{
+        height: 100px;
+        span{
+            width: 100%;
+            font-size: 12px;
+        }
+        p{
+            width: 100%;
+            font-size: 8px;
+        }
+    }
+}
